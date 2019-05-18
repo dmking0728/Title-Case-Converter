@@ -9,7 +9,7 @@ copy.addEventListener('click', copyTo);
 function grabText() {
   const textBox = document.querySelector('#text-box').value;
   const splitStr = textBox.toLowerCase().split(" ");
-  const exceptions = ["and", "the", "a", "an", "for", "to","but", "at","by", "on", "as" "in", "of", "so", "by", "nor", "or", "up", "yet"]
+  const exceptions = ["and", "the", "a", "an", "for", "to","but", "at","by", "on", "as", "in", "of", "so", "by", "nor", "or", "up", "yet"]
 
   if(textBox == "") {
     alert('Enter a title!')
