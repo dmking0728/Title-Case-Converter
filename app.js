@@ -6,12 +6,13 @@ const copy = document.querySelector('#copy');
 button.addEventListener('click', grabText);
 copy.addEventListener('click', copyTo);
 
-
+//grabs text then converts it to lowercase and then splits it into a new array with each word as its own item in that array 
 function grabText() {
   const textBox = document.querySelector('#text-box').value;
   const splitStr = textBox.toLowerCase().split(" ");
   const exceptions = ["and", "the", "a", "an", "for", "to","but", "at","by", "on", "as", "in", "of", "so", "by", "nor", "or", "up", "yet"]
 
+  //error handling
   if(textBox == "") {
     alert('Enter a title!')
     //if the user already submitted once and wants to submit again, clear the prior result and run lowercase code again. if no prior result found, AKA it is their first time submitting, just run the lowercase code.
@@ -29,10 +30,10 @@ function grabText() {
   
     const array = splitStr.join(" ");
     array.toString();
-    const h1 = document.createElement("h1");
-    h1.className = 'result';
-    h1.innerHTML = array;
-    document.body.querySelector(".result-div").appendChild(h1);
+    const h2 = document.createElement("h2");
+    h2.className = 'result';
+    h2.innerHTML = array;
+    document.body.querySelector(".result-div").appendChild(h2);
 
   } else {
     for(i = 0; i < splitStr.length; i++) {
@@ -46,10 +47,10 @@ function grabText() {
   
     const array = splitStr.join(" ");
     array.toString();
-    const h1 = document.createElement("h1");
-    h1.className = 'result';
-    h1.innerHTML = array;
-    document.body.querySelector(".result-div").appendChild(h1);
+    const h2 = document.createElement("h2");
+    h2.className = 'result';
+    h2.innerHTML = array;
+    document.body.querySelector(".result-div").appendChild(h2);
   }
 }
 
